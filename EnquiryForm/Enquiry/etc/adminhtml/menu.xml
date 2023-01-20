@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="EnquiryForm_Enquiry::manager" title="Enquiry" module="EnquiryForm_Enquiry" sortOrder="10" resource="EnquiryForm_Enquiry::manager" />
+        <add id="EnquiryForm_Enquiry::add_row" title="Enquiry" module="EnquiryForm_Enquiry" sortOrder="20" parent="EnquiryForm_Enquiry::manager" action="magegetenquiry/grid" resource="EnquiryForm_Enquiry::index"/>
+    
+    
+    <!-- settings -->
+    
+           <add id="EnquiryForm_Enquiry::menu_submenusettingsenabledisable"
+             title="Settings"
+             resource="Magento_Backend::content"
+             module="EnquiryForm_Enquiry"
+             sortOrder="1"
+             action="adminhtml/system_config/edit/section/enquiryForm"
+             parent="EnquiryForm_Enquiry::manager" />
+    
+    
+    </menu>
+</config>

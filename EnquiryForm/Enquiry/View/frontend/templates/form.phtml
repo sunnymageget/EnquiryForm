@@ -1,0 +1,81 @@
+
+<h1>Enquiry Form </h1>
+<!-- <hr width="100px"> -->
+<div id="custom-form">
+  <form class="enquiry" action="
+		<?php echo $this->getUrl('enquiry/form/save',['_secure'=>true]); ?>" id="custom-form" method="post" data-hasrequired="
+		<?php echo __('* Required Fields') ?>" enctype="multipart/form-data" data-mage-init='{"validation":{}}'>
+    <div class="field name required">
+      <label class="label" for="name">
+        <span> <b><?php echo __('Name') ?></b> <span style="color:red">*</span> </span>
+      </label>
+      <div class="control">
+        <input style="width: 47%" name="name" id="name" title="<?php  echo __('Name') ?>" class="input-text" type="text"  data-validate="{required:true}" />
+      </div><br>
+      <div class="field email required">
+        <label class="label" for="email">
+          <span> <b><?php  echo __('Email') ?></b><span style="color:red">*</span> </span>
+        </label>
+        <div class="control">
+          <input style="width: 47%" name="email" id="email" title="<?php  echo __('Email') ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}" />
+        </div>
+      </div><br>
+      <div class="field phonenumber">
+        <label class="label" for="phonenumber">
+          <span> <b><?php  echo __('Phone Number') ?></b><span style="color:red">*</span> </span>
+        </label>
+        <div class="control">
+          <input style="width: 47%" name="phonenumber" id="phonenumber" title="<?php  echo __('Phone Number') ?>" value="" class="input-text" type="text" data-validate="{required:true,'validate-number':true,'phoneUS':true}"  />
+        </div>
+      </div><br> 
+
+      <div class="field dob">
+        <label class="label" for="dob">
+          <span> <b><?php  echo __('dob') ?></b><span style="color:red">*</span> </span>
+        </label>
+        <div class="control">
+          <input style="width: 47%" name="dob" id="dob" title="<?php  echo __('Date of Birth') ?>" value="" class="input-date" type="date" data-validate="{required:true}"/>
+        </div>
+      </div><br>
+      
+      <div class="field message required">
+      <label class="label" for="message">
+        <span> <b><?php  echo __('Message') ?></b><span style="color:red">*</span> </span>
+      </label>
+      <div class="control">
+        <textarea style="width: 47%" name="message" id="message" rows="5" title="<?php  echo __('Message') ?>" class="input-text" type="text" data-validate="{required:true}" ></textarea>
+      </div>
+
+      <br/>
+      <div class="field ChooseProfileImage">
+        <label class="label" for="Choose Profile Image">
+          <span> <b><?php  echo __('Choose Profile Image') ?></b> </span>
+        </label><br/>
+        <div class="control">
+        <input type="file" name="upload_file" id="file-upload"/>
+        </div>
+      </div>
+
+
+
+      <div class="actions-toolbar"> 
+
+<br/>
+<div class="primary">
+
+ 
+
+     <button type="submit" title="<?php  echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+
+         <span><?php  echo __('Submit') ?></span>
+
+     </button>
+
+ </div>
+
+</div>
+
+  </form>
+</div>
+
+
